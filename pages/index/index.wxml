@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view hidden="{{clockShow}}">
+  <view class="slider">
+    <slider min="1" max="60" block-size="13" show-value value="{{time}}" bindchange="sliderChange"></slider>
+  </view>
+
+  <view class="task-text">
+    <view class="task-title">选择一个任务</view>
+    <view class="task-desc">在接下来的{{time}}分钟里，请你专注做此事</view>
+  </view>
+
+  <view class="task-cate">
+    <view wx:for="{{cateArr}}" wx:key="index" class="cate-item" bindtap="itemTap" data-index="{{index}}">
+      <view class="cate-icon">
+        <image src="../../images/{{item.icon}}.png" mode="widthFix"></image>
+      </view>
+      <view class="cate-text {{index == cateActive ? 'active' : ''}}">{{item.text}}</view>
+    </view>
+  </view>
+  <button class="start" bindtap="start">开始专注</button>
+</view>
+<view class="clock" hidden="{{!clockShow}}">
+  <view class="progress">
+    <canvas canvas-id="progress-bg" class="progress-bg"></canvas>
+    <canvas canvas-id="progress-active" class="progress-active"></canvas>
+    <view class="progress-text">{{timeStr}}</view>
+  </view>
+</view>

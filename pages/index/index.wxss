@@ -1,0 +1,71 @@
+/**index.wxss**/
+.slider {
+  width: 650rpx;
+  margin: 0 auto;
+}
+
+.task-text {
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+
+.task-text .task-title {
+  font-size: 38rpx;
+  font-weight: 700;
+}
+.task-text .task-desc {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.task-cate {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.task-cate .cate-item {
+  width: calc(100% / 3);
+  text-align: center;
+}
+.cate-item:nth-child(n+4) {
+  margin-top: 40rpx;
+}
+.cate-icon image {
+  width: 50%;
+}
+.start {
+  margin-top: 50rpx;
+}
+
+.cate-text.active {
+  color: red;
+}
+
+.clock {
+  height: 100vh;
+  background: #E7624F;
+  position: relative;
+}
+.progress {
+  position: absolute;
+  top: 140rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400rpx;
+  height: 400rpx;
+}
+.progress .progress-bg,
+.progress .progress-active
+ {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progress .progress-text {
+  line-height: 400rpx;
+  text-align: center;
+}
