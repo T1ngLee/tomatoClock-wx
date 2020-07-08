@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view hidden="{{clockShow}}">
+<view>
   <view class="slider">
     <slider min="1" max="60" block-size="13" show-value value="{{time}}" bindchange="sliderChange"></slider>
   </view>
@@ -18,11 +18,4 @@
     </view>
   </view>
   <button class="start" bindtap="start">开始专注</button>
-</view>
-<view class="clock" hidden="{{!clockShow}}">
-  <view class="progress">
-    <canvas canvas-id="progress-bg" class="progress-bg"></canvas>
-    <canvas canvas-id="progress-active" class="progress-active"></canvas>
-    <view class="progress-text">{{timeStr}}</view>
-  </view>
 </view>

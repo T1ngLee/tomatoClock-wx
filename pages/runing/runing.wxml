@@ -1,0 +1,21 @@
+<!--runing.wxml-->
+<view class="clock">
+  <view class="progress">
+    <canvas canvas-id="progress-bg" class="progress-bg"></canvas>
+    <canvas canvas-id="progress-active" class="progress-active"></canvas>
+    <view class="progress-text">{{timeStr}}</view>
+  </view>
+  <view class="btn-box">
+    <view class="end" hidden="{{state != 'end'}}">
+      <button class="back" bindtap="backHome">返回首页</button>
+      <button class="again" bindtap="again">再来一次</button>
+    </view>
+    <view class="runing" hidden="{{state != 'runing'}}">
+      <button class="pause" bindtap="pause">暂停</button>
+    </view>
+    <view class="paused" hidden="{{state != 'paused'}}">
+      <button class="abandon">放弃</button>
+      <button class="containe" bindtap="run">继续</button>
+    </view>
+  </view>
+</view>
